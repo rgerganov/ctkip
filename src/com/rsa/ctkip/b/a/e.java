@@ -9,7 +9,7 @@ import java.io.UnsupportedEncodingException;
 
 public class e {
     private static final byte[] a = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".getBytes("UTF-8");
-    private static final byte[] b = new byte[]{(byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -5, (byte) -5, (byte) -9, (byte) -9, (byte) -5, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -5, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) 62, (byte) -9, (byte) -9, (byte) -9, (byte) 63, dh.fI, em.fI, dq.fI, (byte) 55, fv.fI, (byte) 57, (byte) 58, (byte) 59, (byte) 60, (byte) 61, (byte) -9, (byte) -9, (byte) -9, (byte) -1, (byte) -9, (byte) -9, (byte) -9, (byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31, (byte) 32, (byte) 33, (byte) 34, (byte) 35, (byte) 36, (byte) 37, (byte) 38, (byte) 39, (byte) 40, (byte) 41, (byte) 42, (byte) 43, (byte) 44, (byte) 45, (byte) 46, (byte) 47, (byte) 48, (byte) 49, (byte) 50, cm.eF, (byte) -9, (byte) -9, (byte) -9, (byte) -9};
+    private static final byte[] bb = new byte[]{(byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -5, (byte) -5, (byte) -9, (byte) -9, (byte) -5, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -5, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) 62, (byte) -9, (byte) -9, (byte) -9, (byte) 63, dh.fI, em.fI, dq.fI, (byte) 55, fv.fI, (byte) 57, (byte) 58, (byte) 59, (byte) 60, (byte) 61, (byte) -9, (byte) -9, (byte) -9, (byte) -1, (byte) -9, (byte) -9, (byte) -9, (byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) -9, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31, (byte) 32, (byte) 33, (byte) 34, (byte) 35, (byte) 36, (byte) 37, (byte) 38, (byte) 39, (byte) 40, (byte) 41, (byte) 42, (byte) 43, (byte) 44, (byte) 45, (byte) 46, (byte) 47, (byte) 48, (byte) 49, (byte) 50, cm.eF, (byte) -9, (byte) -9, (byte) -9, (byte) -9};
 
     static {
         try {
@@ -21,16 +21,16 @@ public class e {
     private static int a(byte[] bArr, int i, byte[] bArr2, int i2) {
         int i3;
         if (bArr[i + 2] == (byte) 61) {
-            bArr2[i2] = (byte) ((((b[bArr[i]] & 255) << 18) | ((b[bArr[i + 1]] & 255) << 12)) >>> 16);
+            bArr2[i2] = (byte) ((((bb[bArr[i]] & 255) << 18) | ((bb[bArr[i + 1]] & 255) << 12)) >>> 16);
             return 1;
         } else if (bArr[i + 3] == (byte) 61) {
-            i3 = (((b[bArr[i]] & 255) << 18) | ((b[bArr[i + 1]] & 255) << 12)) | ((b[bArr[i + 2]] & 255) << 6);
+            i3 = (((bb[bArr[i]] & 255) << 18) | ((bb[bArr[i + 1]] & 255) << 12)) | ((bb[bArr[i + 2]] & 255) << 6);
             bArr2[i2] = (byte) (i3 >>> 16);
             bArr2[i2 + 1] = (byte) (i3 >>> 8);
             return 2;
         } else {
             try {
-                i3 = ((((b[bArr[i]] & 255) << 18) | ((b[bArr[i + 1]] & 255) << 12)) | ((b[bArr[i + 2]] & 255) << 6)) | (b[bArr[i + 3]] & 255);
+                i3 = ((((bb[bArr[i]] & 255) << 18) | ((bb[bArr[i + 1]] & 255) << 12)) | ((bb[bArr[i + 2]] & 255) << 6)) | (bb[bArr[i + 3]] & 255);
                 bArr2[i2] = (byte) (i3 >> 16);
                 bArr2[i2 + 1] = (byte) (i3 >> 8);
                 bArr2[i2 + 2] = (byte) i3;
@@ -95,7 +95,7 @@ public class e {
         int i6 = 0;
         while (i4 < i + i2) {
             byte b = (byte) (bArr[i4] & 127);
-            byte b2 = b[b];
+            byte b2 = bb[b];
             if (b2 >= (byte) -5) {
                 if (b2 >= (byte) -1) {
                     i3 = i5 + 1;
@@ -123,7 +123,7 @@ public class e {
             }
         }
         i3 = i6;
-        Object obj = new byte[i3];
+        byte obj[] = new byte[i3];
         System.arraycopy(bArr2, 0, obj, 0, i3);
         return obj;
     }

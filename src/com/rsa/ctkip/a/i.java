@@ -3,7 +3,6 @@ package com.rsa.ctkip.a;
 import com.rsa.ctkip.b.a.a;
 import com.rsa.ctkip.b.a.b;
 import com.rsa.ctkip.b.a.c;
-import com.rsa.ctkip.b.a.d;
 
 class i {
     private static byte[] a(byte[] bArr, byte[] bArr2, int i) {
@@ -13,7 +12,7 @@ class i {
     public static byte[] a(byte[] bArr, byte[] bArr2, int i, String str) {
         if (str.equals(b.b)) {
             String str2 = "MAC 2 Computation";
-            Object obj = new byte[(str2.length() + bArr.length)];
+            byte obj[] = new byte[(str2.length() + bArr.length)];
             System.arraycopy(str2.getBytes(), 0, obj, 0, str2.length());
             System.arraycopy(bArr, 0, obj, str2.length() + 0, bArr.length);
             return a(bArr2, obj, i);
@@ -24,9 +23,9 @@ class i {
     public static byte[] a(byte[] bArr, byte[] bArr2, byte[] bArr3, int i, String str) {
         if (str.indexOf("ct-kip-prf-aes") != -1) {
             String str2 = "Key generation";
-            Object obj = new byte[((bArr3.length + str2.length()) + bArr2.length)];
+            byte obj[] = new byte[((bArr3.length + str2.length()) + bArr2.length)];
             System.arraycopy(bArr3, 0, obj, 0, bArr3.length);
-            Object bytes = str2.getBytes();
+            byte bytes[] = str2.getBytes();
             System.arraycopy(bytes, 0, obj, bArr3.length, bytes.length);
             System.arraycopy(bArr2, 0, obj, str2.length() + bArr3.length, bArr2.length);
             return a(bArr, obj, i);
@@ -35,7 +34,7 @@ class i {
     }
 
     private static byte[] b(byte[] bArr, byte[] bArr2, int i) {
-        d cVar = new c();
+        c cVar = new c();
         cVar.a(bArr, 128, 1);
         a aVar = new a(cVar);
         aVar.a();

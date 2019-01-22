@@ -9,7 +9,7 @@ public final class c extends d {
     private static final byte[] f = new byte[256];
     private static final int[] g = new int[256];
     private static final int[] h = new int[256];
-    private static final int[] i = new int[256];
+    private static final int[] ii = new int[256];
     private static final int[] j = new int[256];
     private static final int[] k = new int[10];
     private int l = 0;
@@ -52,7 +52,7 @@ public final class c extends d {
             charAt = (((charAt << 24) | (i8 << 16)) | (i10 << 8)) | i9;
             g[i3] = charAt;
             h[i3] = (charAt >>> 8) | (charAt << 24);
-            i[i3] = (charAt >>> 16) | (charAt << 16);
+            ii[i3] = (charAt >>> 16) | (charAt << 16);
             j[i3] = (charAt << 8) | (charAt >>> 24);
         }
         k[0] = 16777216;
@@ -106,13 +106,13 @@ public final class c extends d {
         int i4 = i2 - 4;
         while (i < this.l) {
             i2 = this.o[i4];
-            this.p[i3] = j[a[i2 & 255] & 255] ^ ((g[a[i2 >>> 24] & 255] ^ h[a[(i2 >>> 16) & 255] & 255]) ^ i[a[(i2 >>> 8) & 255] & 255]);
+            this.p[i3] = j[a[i2 & 255] & 255] ^ ((g[a[i2 >>> 24] & 255] ^ h[a[(i2 >>> 16) & 255] & 255]) ^ ii[a[(i2 >>> 8) & 255] & 255]);
             i2 = this.o[i4 + 1];
-            this.p[i3 + 1] = j[a[i2 & 255] & 255] ^ ((g[a[i2 >>> 24] & 255] ^ h[a[(i2 >>> 16) & 255] & 255]) ^ i[a[(i2 >>> 8) & 255] & 255]);
+            this.p[i3 + 1] = j[a[i2 & 255] & 255] ^ ((g[a[i2 >>> 24] & 255] ^ h[a[(i2 >>> 16) & 255] & 255]) ^ ii[a[(i2 >>> 8) & 255] & 255]);
             i2 = this.o[i4 + 2];
-            this.p[i3 + 2] = j[a[i2 & 255] & 255] ^ ((g[a[i2 >>> 24] & 255] ^ h[a[(i2 >>> 16) & 255] & 255]) ^ i[a[(i2 >>> 8) & 255] & 255]);
+            this.p[i3 + 2] = j[a[i2 & 255] & 255] ^ ((g[a[i2 >>> 24] & 255] ^ h[a[(i2 >>> 16) & 255] & 255]) ^ ii[a[(i2 >>> 8) & 255] & 255]);
             i2 = this.o[i4 + 3];
-            this.p[i3 + 3] = j[a[i2 & 255] & 255] ^ ((g[a[i2 >>> 24] & 255] ^ h[a[(i2 >>> 16) & 255] & 255]) ^ i[a[(i2 >>> 8) & 255] & 255]);
+            this.p[i3 + 3] = j[a[i2 & 255] & 255] ^ ((g[a[i2 >>> 24] & 255] ^ h[a[(i2 >>> 16) & 255] & 255]) ^ ii[a[(i2 >>> 8) & 255] & 255]);
             i3 += 4;
             i4 -= 4;
             i++;
@@ -123,6 +123,7 @@ public final class c extends d {
         this.p[i3 + 3] = this.o[i4 + 3];
     }
 
+    @Override
     public final int a() {
         return 16;
     }
@@ -154,6 +155,7 @@ public final class c extends d {
         }
     }
 
+    @Override
     public final void a(byte[] bArr, byte[] bArr2) {
         int i = ((((bArr[8] << 24) | ((bArr[9] & 255) << 16)) | ((bArr[10] & 255) << 8)) | (bArr[11] & 255)) ^ this.o[2];
         int i2 = this.o[3] ^ ((((bArr[12] << 24) | ((bArr[13] & 255) << 16)) | ((bArr[14] & 255) << 8)) | (bArr[15] & 255));
