@@ -4,7 +4,7 @@ import com.rsa.ctkip.b.a.a;
 import com.rsa.ctkip.b.a.b;
 import com.rsa.ctkip.b.a.c;
 
-class i {
+public class i {
     private static byte[] a(byte[] bArr, byte[] bArr2, int i) {
         return b(bArr, bArr2, 1);
     }
