@@ -51,28 +51,24 @@ public final class a {
         if (this.g != 0) {
             throw new RuntimeException("OMAC computation not initialized");
         }
-        int i3;
-        int i4 = this.b - this.e;
-        while (true) {
-            i3 = 0;
-            if (i <= this.e) {
-                break;
-            }
+        int i3 = this.b - this.e;
+        int i4 = 0;
+        while (i > this.e) {
             for (int i5 = 0; i5 < this.e; i5++) {
                 byte[] bArr2 = this.d;
-                int i6 = i4 + i5;
-                bArr2[i6] = (byte) (bArr2[i6] ^ bArr[i3 + i5]);
+                int i6 = i3 + i5;
+                bArr2[i6] = (byte) (bArr2[i6] ^ bArr[i4 + i5]);
             }
             this.a.a(this.d, this.d);
             i -= this.e;
-            i3 += this.e;
-            i4 = this.b;
-            this.e = i4;
+            i4 += this.e;
+            this.e = this.b;
+            i3 = 0;
         }
         while (i2 < i) {
             byte[] bArr3 = this.d;
-            int i7 = i4 + i2;
-            bArr3[i7] = (byte) (bArr3[i7] ^ bArr[i3 + i2]);
+            int i7 = i3 + i2;
+            bArr3[i7] = (byte) (bArr3[i7] ^ bArr[i4 + i2]);
             i2++;
         }
         this.e -= i;
